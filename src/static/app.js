@@ -5,15 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const toastContainer = document.createElement("div");
   toastContainer.className = "toast-container";
-  toastContainer.style.position = "fixed";
-  toastContainer.style.right = "20px";
-  toastContainer.style.bottom = "20px";
-  toastContainer.style.display = "flex";
-  toastContainer.style.flexDirection = "column-reverse";
-  toastContainer.style.gap = "10px";
-  toastContainer.style.zIndex = "2147483647";
-  toastContainer.style.maxWidth = "min(92vw, 380px)";
-  toastContainer.style.pointerEvents = "none";
   document.body.appendChild(toastContainer);
 
   const showToast = (message, type = "info") => {
