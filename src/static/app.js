@@ -51,12 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
         activityCard.className = "activity-card";
 
         const spotsLeft = details.max_participants - details.participants.length;
+        const encodedActivity = encodeURIComponent(name);
         const participantsMarkup = details.participants.length
           ? `<ul class="participants-list">${details.participants
               .map((participant) => {
                 const safeParticipant = escapeHtml(participant);
                 const encodedParticipant = encodeURIComponent(participant);
-                const encodedActivity = encodeURIComponent(name);
 
                 return `<li class="participant-item">
                   <span class="participant-email">${safeParticipant}</span>
